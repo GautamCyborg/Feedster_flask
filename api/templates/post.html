@@ -1,0 +1,32 @@
+{% extends "base.html"%}
+{%block title%}Post{%endblock%}
+{%block content%}
+<br>
+<label for="formFileDisabled" class="form-label">POST SOMETHING</label>
+<br>
+<form method="POST" enctype="multipart/form-data">
+    <div class="form-group">  
+      <input
+        name="file" 
+        type="file"
+        for="image" 
+        class="form-control-file" 
+        id="exampleFormControlFile1">
+      </div>
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Title</label>
+      <input
+        name="title"
+        type="text" 
+        class="form-control" 
+        id="exampleFormControlInput1" 
+        placeholder="Enter title here">
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Add Caption</label>
+      <textarea name="caption" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+    <br>
+  <button type="submit" class="btn btn-outline-success">POST</button>
+  </form>
+{%endblock%}
